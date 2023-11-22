@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+
+body{
+    background: #3E282B;
+    box-sizing: border-box;
+    padding: 0px 150px;
+}
+.hero-container{
+    display: flex;
+}
+
+#map{
+    /* display: flex; */
+    height: 80vh;
+    width: 50%;
+    /* outline: 5px solid red !important; */
+    border-radius: 50%;
+}
+
+
+.visually-hidden {
+  position: absolute;
+position: absolute !important;
+width: 1px !important;
+height: 1px !important;
+padding: 0 !important;
+margin: -1px !important;
+overflow: hidden !important;
+clip: rect(0,0,0,0) !important;
+white-space: nowrap !important;
+border: 0 !important;
+}
+
+
+
+.text-wrapper{
+    /* font-family: 'Merriweather', serif; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8em;
+    color: white;
+}
+
+.header {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.subheader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* BUTTON */
+.demo-button {
+
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  margin: 50px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.demo-button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.demo-button:hover:after {
+  transform: translate(0, 0);
+}
+
+.demo-button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.demo-button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .demo-button {
+    padding: 0 40px;
+  }
+}
+
+
+
+.logo{
+  width: 150px;
+  height: 150px;
+}
+
+
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+
+
+/* navigation */
+.navbar-icon-close {
+  width: 150px;
+  height: 150px;
+  display:none;
+
+}
+
+.navbar-icon-open{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: .5em;
+}
+
+@media (max-width: 50em) {
+  .primary-navigation{
+    display:none;
+  }
+}
+
+nav {
+  
+  }
+
+  nav a {
+  
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .nav-button{
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  /* display: flex;
+  flex-direction: column; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  margin: 50px;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+
+/* CSS for row-buttons */
+.button-row-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row-buttons {
+  background-color: #0276FF;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* width: 100%; */
+}
+
+.row-buttons:hover,
+.row-buttons:focus {
+  opacity: .75;
+}

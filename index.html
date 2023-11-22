@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</header>
+
+<body>
+<header>
+    <img src="/images/logo.svg" alt="logo" class="logo">
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" id="primary-navigation">
+        <img class="navbar-icon-close"src="/images/navbar-close.svg" alt="" aria-hidden="true">
+        <img class="navbar-icon-open" src="/images/navbar-icon.svg" alt="" aria-hidden="true">
+        <span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="primary-navigation">
+        <ul aria-li class="nav-links" id="primary-navigation">
+            <a href="#">Who Are We?</a>
+            <a href="#" class="nav-button">Locations Near You</a>
+        </ul>
+    </nav>
+</header>
+
+    <!--  Map  -->
+    <div class="hero-container">
+        <div id='map'>
+            <script>
+                token = 'pk.eyJ1Ijoiamh1bGV0dC1nZW8iLCJhIjoiY2xwNXo3MGp3MWtpNDJqcXZhMnY2eHk2NSJ9.yA4eUFE95vYHuJ7Qo-UyaQ'
+
+                mapboxgl.accessToken = token;
+                const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                projection: 'globe',
+                style: 'mapbox://styles/mapbox/streets-v12', // style URL
+                center: [0, 40], // starting position [lng, lat]
+                zoom: 2.2, // starting zoom
+                    });
+            </script>
+        </div>
+        <div class="text-wrapper">
+            <h1 class="header">The Countdown Begins...</h1>
+            <p class="subheader">Launching soon! Check out our demo below in the meantime.</p>
+            <a href="demopage.html">
+                <button class="demo-button">Try Our Demo!</button>
+            </a>
+        </div> 
+    </div>
+
+    <div class="button-row-container">
+        <button class="row-buttons">Farmer's Market / Organic Food</button>
+        <button class="row-buttons">Events</button>
+        <button class="row-buttons">Hole In The Walls</button>
+        <button class="row-buttons">Botanicals</button>
+        <button class="row-buttons">Surprise me!</button>
+    </div>
+    <div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
+
+    
+</body>
+</html>
