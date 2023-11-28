@@ -118,120 +118,95 @@ border: 0 !important;
 }
 
 
+/* navbar */
 
-.logo{
-  width: 150px;
-  height: 150px;
-}
-
-
-
-header{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0px 10px;
-}
-
-
-
-/* navigation */
-.navbar-icon-close {
-  width: 150px;
-  height: 150px;
-  display:none;
+nav{
+  background-color: transparent;
 
 }
 
-.navbar-icon-open{
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  background: none;
-  border: 0;
-  padding: .5em;
-}
-
-@media (max-width: 50em) {
-  .primary-navigation{
-    display:none;
-  }
-}
-
-nav {
-  
-  }
-
-  nav a {
-  
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  .nav-button{
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  /* display: flex;
-  flex-direction: column; */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  margin: 50px;
-  padding: 10px 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  }
-
-/* CSS for row-buttons */
-.button-row-container{
+nav ul{
+  width: 100%;
+  list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.row-buttons {
-  background-color: #0276FF;
-  border-radius: 4px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5;
-  margin: 0;
-  max-width: none;
-  min-height: 44px;
-  min-width: 10px;
-  outline: none;
-  overflow: hidden;
-  padding: 9px 20px 8px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  /* width: 100%; */
+nav li{
+  /* height from ceiling */
+  height: 50px;
+  /* outline: auto red; */
+
 }
 
-.row-buttons:hover,
-.row-buttons:focus {
-  opacity: .75;
+nav a{
+  height: 100%;
+  /* gives the space in-between elements */
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  /* outline: auto red; */
+}
+
+nav a:hover{
+  background-color: #ffdeda;
+}
+
+nav li:first-child{
+/* Moves logo to the right */
+  margin-right: auto;
+}
+
+
+/* This is our base for our navbar */
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  /* Hide display on bigger screens */
+  display: none;
+  background-color: transparent;
+  /* Background will be blurred once opened */
+  backdrop-filter: blur(15px);
+  box-shadow: -10px 0 10px rgba(255,255,255,0.1);
+  flex-direction: column;
+  /* for centering elements */
+  align-items: flex-start;
+  /* for positioning elements */
+  justify-content: flex-start;
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+}
+
+.menu-button{
+  display: none;
+}
+
+@media(max-width: 800px){
+  /* Hidethe close button until mobile appears */
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: flex;
+  }
+}
+
+@media(max-width: 400px){
+  /* maximize the sidebar so that it covers full-screen on mobile*/
+  .sidebar{
+    width: 100%;
+  }
 }

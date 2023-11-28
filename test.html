@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Castello Plan: Sidebar</title>
+    <title>WhereAt?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script> -->
     <!-- <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' /> -->
@@ -89,7 +89,15 @@ html, body, #map{
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
-}   
+}  
+
+p{
+  color: red;
+}
+
+.container{
+  outline: 1px solid red;
+}
 </style>
 	
 
@@ -165,12 +173,19 @@ map.on('click', (event) => {
 
     // Popup for the map
     const popup = new mapboxgl.Popup({
-            offset: [0, -15]
+            offset: [0, -15],
+            anchor: 'bottom',
+            closeOnClick: true,
+            maxWidth: '500px'
         })
         .setLngLat(feature.geometry.coordinates)
         .setHTML(
-            `<h3>${feature.properties.event_name}</h3>
-            <p>${feature.properties.address}</p>`
+            `
+            <div class='container'>
+            <h3>${feature.properties.event_name}</h3>
+            <p>${feature.properties.address}</p>
+            </div>`
+          
         )
         .addTo(map);
 });
