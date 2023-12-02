@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="whereat_git">
+    <serverData>
+      <paths name="whereat_git">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/app" local="$PROJECT_DIR$/app" web="/" />
+            <mapping deploy="/public_html" local="$PROJECT_DIR$/public_html" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/public_html/.well-known" />
+            <excludedPath path="/public_html/assets" />
+            <excludedPath path="/public_html/cgi-bin" />
+            <excludedPath path="/public_html/css" />
+            <excludedPath path="/public_html/google-api" />
+            <excludedPath path="/public_html/images" />
+            <excludedPath path="/public_html/img" />
+            <excludedPath path="/public_html/js" />
+            <excludedPath path="/public_html/site" />
+            <excludedPath path="/public_html/vendor" />
+            <excludedPath path="/public_html/.htaccess" />
+            <excludedPath path="/public_html/dashboard.php" />
+            <excludedPath path="/public_html/error_log" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

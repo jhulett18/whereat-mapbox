@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1bd865f0-7bd9-4dfe-9ebd-93642723ce7a" name="whereat_git">
+        <fileTransfer rootFolder="/home/whereat" accessType="SFTP" host="142.11.205.3" port="22" sshConfigId="ddc574f7-0eb9-43b5-992a-f8d1905beb4e" sshConfig="root@142.11.205.3:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
